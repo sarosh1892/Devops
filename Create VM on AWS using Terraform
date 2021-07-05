@@ -1,0 +1,11 @@
+provider "aws" {
+region = "ap-east-1"
+access_key = ""
+secret_key =""
+}
+# Resource configuration
+resource "aws_instance" "Ubuntu Server 16.04 LTS" {
+ami = "ami-xxxxxxxxxxxxx"
+instance_type = "t2.large"
+key_name = "xxxxxxx"
+}
