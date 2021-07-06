@@ -3,7 +3,7 @@ create an automation using Terraform:
 
 First of all create a User on AWS and Generate Access and Secret Key.
 
-Create a main.tf file and add the script(1) then export the AWS Access and Secret Keys then run 
+Create a ec2.tf  and add the terraform code to it then export the AWS Access and Secret Keys then run 
 
 terraform plan
 
@@ -43,3 +43,21 @@ Then run the docker container on port 80
 docker run -d -p 80:80 nginx-docker
 
 Check the docker status by running the command docker ps -a
+
+
+Install Jenkis on Linux VM:
+
+sudo apt update
+sudo apt install openjdk-8-jdk
+wget –q –O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add –
+
+sudo nano /etc/apt/sources.list
+
+##Add below line:
+
+#  Jenkins software repository
+deb https://pkg.jenkins.io/debian binary
+
+sudo apt install Jenkins
+
+sudo systemctl status jenkins
