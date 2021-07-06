@@ -1,0 +1,15 @@
+##First of ALL copying the artifacts
+
+/bin/cp xxxxxxxxxxx  ../docker/
+
+##Intall Docker Container
+
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.i
+
+
+sudo docker build -t nginx-docker . .
+
+##Then run the docker container on port 80
+
+docker run -d -p 80:80 nginx-docker
